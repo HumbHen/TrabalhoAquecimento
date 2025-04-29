@@ -1,5 +1,8 @@
 #include "matriz.hpp"
+#include "incendio.hpp"
 #include <iostream>
+
+const int numInt = 10;
 
 using namespace std;
 
@@ -14,10 +17,28 @@ int main() {
     cout << "Matriz carregada com sucesso:" << endl;
     matriz.imprimir();
 
-    // Simulação de uma iteração - neste exemplo, só salva como está
-    matriz.salvarEstado("output.dat");
+    Incendio incendio(matriz);
 
-    cout << "Estado salvo em output.dat" << endl;
+    cout << endl;
+
+    for (int i = 1; i <= numInt; i++ ) {
+
+        incendio.executarIteracao();
+
+        cout << "Estado após " << i << " interacoes, a propagação do incêndio: " << endl;
+        matriz.imprimir();
+    
+        // Salva estado atualizado
+        matriz.salvarEstado("output.dat");
+
+        cout << " \n------------------------\n " << endl;
+
+        if (!incendio.temFogo(matriz)) {
+            cout << "Incêndio extinto após " << i << " interações." << endl;
+            break; // Sai do laço se não houver mais árvores em chamas
+        }
+
+    }
 
     return 0;
 }

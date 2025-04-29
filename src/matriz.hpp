@@ -13,6 +13,11 @@ public:
     void salvarEstado(const string& nomeArquivo) const;
     void imprimir() const;
 
+    vector<vector<int>> getDados() const;
+    void setDados(const vector<vector<int>>& novosDados);
+    int getLinhas() const;
+    int getColunas() const;
+
 private:
     int linhas;
     int colunas;

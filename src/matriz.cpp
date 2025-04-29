@@ -4,6 +4,22 @@
 
 Matriz::Matriz() : linhas(0), colunas(0), posX(0), posY(0) {}
 
+vector<vector<int>> Matriz::getDados() const {
+    return dados;
+}
+
+void Matriz::setDados(const vector<vector<int>>& novosDados) {
+    dados = novosDados;
+}
+
+int Matriz::getLinhas() const {
+    return linhas;
+}
+
+int Matriz::getColunas() const {
+    return colunas;
+}
+
 bool Matriz::carregarArquivo(const string& nomeArquivo) {
     ifstream arquivo(nomeArquivo);
     if (!arquivo.is_open()) {
