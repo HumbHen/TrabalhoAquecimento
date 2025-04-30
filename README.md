@@ -27,3 +27,4 @@
 
 <h2 align="center">📁 Estrutura do Projeto</h2>
 
+TrabalhoAquecimento/ ├── build/ # Diretório de saída (binários, objetos) ├── include/ # Arquivos de cabeçalho (.hpp) │ ├── animal.hpp │ ├── incendio.hpp │ ├── matriz.hpp │ └── config.hpp ├── src/ # Implementações das classes (.cpp) │ ├── animal.cpp │ ├── incendio.cpp │ ├── matriz.cpp │ └── main.cpp ├── input.dat # Arquivo de entrada com a matriz inicial ├── output.dat # Arquivo gerado com os estados da matriz a cada iteração ├── Makefile # Arquivo de automação da compilação └── README.md # Documentação explicativa
