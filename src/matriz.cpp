@@ -45,7 +45,7 @@ bool Matriz::carregarArquivo(const string& nomeArquivo) {
 }
 
 void Matriz::salvarEstado(const string& nomeArquivo) const {
-    ofstream arquivo(nomeArquivo, ios::app); // modo append
+    ofstream arquivo(nomeArquivo, ios::app); 
     if (!arquivo.is_open()) {
         cerr << "Erro ao abrir o arquivo para escrita: " << nomeArquivo << endl;
         return;
@@ -57,7 +57,7 @@ void Matriz::salvarEstado(const string& nomeArquivo) const {
         }
         arquivo << "\n";
     }
-    arquivo << "\n"; // separação entre iterações
+    arquivo << "\n";
 
     arquivo.close();
 }

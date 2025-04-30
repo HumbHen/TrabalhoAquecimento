@@ -8,13 +8,13 @@ using namespace std;
 
 class Incendio {
 public:
-    Incendio(Matriz& matriz); // Construtor que recebe a matriz
+    Incendio(Matriz& matriz);
     void executarIteracao();
     bool temFogo (const Matriz& matriz);
 
 private:
     Matriz& matriz;
-    vector<vector<int>> proximoEstado; // Estado atualizado da matriz
+    vector<vector<int>> proximoEstado;
 
     void atualizarCelula(int x, int y);
     bool existeVizinhoEmChamas(int x, int y);
