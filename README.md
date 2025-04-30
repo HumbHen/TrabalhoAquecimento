@@ -213,5 +213,5 @@ Estado da matriz após 1 interações:
 
 <h2 align="center">👨‍💻 Autor</h2>
 
-<p align="center"><strong>Nome:</strong> Humberto</p>
+<p align="center"><strong>Nome:</strong> Humberto Henrique </p>
 <p align="center"><strong>Curso:</strong> Engenharia da Computação - CEFET-MG</p>
