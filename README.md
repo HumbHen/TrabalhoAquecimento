@@ -108,8 +108,9 @@
 
 <p><code>output.dat</code>:</p>
 
-<pre>
 Estado da matriz após 1 interações:
+
+<pre>
 1 2 1 4 1 1 1 1 1 1 
 2 3 2 1 1 0 1 1 1 1 
 1 2 1 1 1 1 1 0 4 1 
