@@ -1,10 +1,9 @@
-<h1 align="center">🔥 Simulador de Propagação de Incêndios com Estratégia de Fuga de Animal</h1>
+<h1 align="center">🔥 Simulador de Propagação de Incêndios 🔥</h1>
 
 <h2 align="center">Trabalho Prático de Estruturas de Dados em C++</h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++ Badge">
-  <img src="https://img.shields.io/badge/Linux-Simulável-4EAA25?style=for-the-badge&logo=linux&logoColor=white" alt="Linux Badge">
 </p>
 
 ---
