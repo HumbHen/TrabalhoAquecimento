@@ -109,10 +109,17 @@
 <p><code>output.dat</code>:</p>
 
 <pre>
-Iteração 1:
-1 2 1 4 1 1 ...
-2 2 2 1 1 0 ...
-...
+Estado da matriz após 1 interações:
+1 2 1 4 1 1 1 1 1 1 
+2 3 2 1 1 0 1 1 1 1 
+1 2 1 1 1 1 1 0 4 1 
+1 1 1 0 1 0 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 
+1 1 0 1 1 0 1 1 1 1 
+4 1 1 1 1 1 4 1 1 1 
+1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 1 1 1 1 1 
+1 1 4 1 1 1 1 1 1 1 
 </pre>
 
 <p>O conteúdo do arquivo é atualizado a cada nova iteração da simulação.</p>
@@ -125,17 +132,6 @@ Iteração 1:
   <li>✔️ Total de passos percorridos pelo animal</li>
   <li>✔️ Número de encontros com água</li>
   <li>✔️ Iteração final (quando o fogo apaga ou o animal é cercado)</li>
-</ul>
-
----
-
-<h2 align="center">💡 Possíveis Melhorias</h2>
-
-<ul>
-  <li>🔸 Implementar algoritmos de fuga otimizados (A*, Dijkstra)</li>
-  <li>🔸 Suporte a múltiplos animais</li>
-  <li>🔸 Simulação visual com interface gráfica (SFML, OpenGL)</li>
-  <li>🔸 Exportação de dados analíticos (tempo por iteração, áreas queimadas, etc.)</li>
 </ul>
 
 ---
