@@ -17,10 +17,10 @@
 <h3 align="center">🎯 Objetivos da Simulação</h3>
 
 <ul>
-  <li>🔹 Modelar a propagação do fogo em uma matriz com base em regras pré-definidas</li>
-  <li>🔹 Implementar estratégias de movimentação inteligente de um animal</li>
-  <li>🔹 Avaliar o comportamento do sistema com e sem a influência do vento</li>
-  <li>🔹 Registrar o histórico da matriz em arquivo de saída e os dados do animal</li>
+  <li> Modelar a propagação do fogo em uma matriz com base em regras pré-definidas</li>
+  <li> Implementar estratégias de movimentação inteligente de um animal</li>
+  <li> Avaliar o comportamento do sistema com e sem a influência do vento</li>
+  <li> Registrar o histórico da matriz em arquivo de saída e os dados do animal</li>
 </ul>
 
 ---
