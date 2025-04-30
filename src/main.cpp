@@ -1,8 +1,7 @@
 #include "matriz.hpp"
 #include "incendio.hpp"
+#include "config.hpp"
 #include <iostream>
-
-const int numInt = 10;
 
 using namespace std;
 
@@ -35,7 +34,7 @@ int main() {
 
         if (!incendio.temFogo(matriz)) {
             cout << "Incêndio extinto após " << i << " interações." << endl;
-            break; // Sai do laço se não houver mais árvores em chamas
+            break;
         }
 
     }
