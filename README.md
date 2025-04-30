@@ -27,8 +27,6 @@
 
 <h2 align="center">📁 Estrutura do Projeto</h2>
 
-<h2 align="center">📁 Estrutura do Projeto</h2>
-
 <p align="center">O projeto está organizado em pastas de forma modular, separando as responsabilidades por diretório:</p>
 
 <ul>
