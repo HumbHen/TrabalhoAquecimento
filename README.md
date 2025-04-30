@@ -127,13 +127,87 @@ Estado da matriz após 1 interações:
 
 ---
 
-<h2 align="center">📊 Resultados Monitorados</h2>
+<h2 align="center">🧩 Estrutura do Código e Lógica de Implementação</h2>
+
+<p align="center">O projeto é dividido em três componentes principais: <strong>Matriz</strong>, <strong>Animal</strong> e <strong>Incêndio</strong>. Cada um encapsula uma parte da simulação, promovendo modularidade e clareza.</p>
+
+---
+
+<h3>📌 1. Classe <code>Matriz</code></h3>
+
+<p>Responsável por armazenar, carregar e atualizar os dados da floresta representada em uma matriz 2D.</p>
 
 <ul>
-  <li>✔️ Total de passos percorridos pelo animal</li>
-  <li>✔️ Número de encontros com água</li>
-  <li>✔️ Iteração final (quando o fogo apaga ou o animal é cercado)</li>
+  <li><code>carregarArquivo()</code>: Lê o arquivo <code>input.dat</code> contendo dimensões e valores da matriz.</li>
+  <li><code>salvarEstado()</code>: Salva o estado da matriz no arquivo <code>output.dat</code> ao final de cada iteração.</li>
+  <li><code>imprimir()</code>: Exibe a matriz no terminal para visualização passo a passo.</li>
+  <li><code>getDados()</code> e <code>setDados()</code>: Getters e setters para acesso controlado à matriz.</li>
 </ul>
+
+---
+
+<h3>🐾 2. Classe <code>Animal</code></h3>
+
+<p>Controla o comportamento do animal na floresta. Implementa sua estratégia de movimentação e lógica de sobrevivência.</p>
+
+<ul>
+  <li><code>mover(Matriz&)</code>: Tenta mover o animal para a melhor posição ortogonal possível (água > seguro > queimada). Se encontrar água, atualiza a célula e adjacentes.</li>
+  <li><code>melhorPosicao()</code>: Avalia células ortogonais e retorna a de maior prioridade.</li>
+  <li><code>podeMover()</code>: Verifica se o animal pode se mover para uma célula específica.</li>
+  <li><code>estaSeguro()</code>: Retorna se o animal ainda pode ficar parado sem ser considerado cercado.</li>
+  <li><code>getPosicao()</code> e <code>getPassosPercorridos()</code>: Getters para registrar informações da simulação.</li>
+</ul>
+
+<p><strong>Estados monitorados:</strong> passos percorridos, iterações sem se mover, número de encontros com água.</p>
+
+---
+
+<h3>🔥 3. Classe <code>Incendio</code></h3>
+
+<p>Gerencia a propagação do fogo a cada iteração. O fogo se propaga de forma ortogonal e pode ser influenciado pelo vento, se ativado no <code>config.hpp</code>.</p>
+
+<ul>
+  <li><code>executarIteracao()</code>: Atualiza a matriz com base no estado atual do fogo, propagando as chamas.</li>
+  <li><code>atualizarCelula(x, y)</code>: Aplica a lógica de transição da célula (1→2, 2→3).</li>
+  <li><code>existeVizinhoEmChamas(x, y)</code>: Verifica se uma célula saudável deve entrar em chamas, levando em conta o vento.</li>
+  <li><code>temFogo()</code>: Verifica se ainda há células em chamas (condição para continuar a simulação).</li>
+</ul>
+
+---
+
+<h3>🚀 4. Função <code>main()</code></h3>
+
+<p>Orquestra a simulação, seguindo o seguinte fluxo:</p>
+
+<ol>
+  <li>Carrega a matriz do arquivo <code>input.dat</code></li>
+  <li>Cria os objetos <code>Animal</code> e <code>Incendio</code></li>
+  <li>Executa até <code>numInt</code> interações ou até o incêndio acabar</li>
+  <li>Em cada iteração:
+    <ul>
+      <li>O animal se move</li>
+      <li>Verifica se ele está seguro</li>
+      <li>O fogo se propaga</li>
+      <li>A matriz é salva e impressa</li>
+      <li>Se não houver mais fogo, a simulação termina</li>
+    </ul>
+  </li>
+  <li>Ao final, exibe no terminal os resultados do animal (posição, passos, etc.)</li>
+</ol>
+
+---
+
+<h3>🧾 5. Arquivo de Configuração <code>config.hpp</code></h3>
+
+<p>Permite configurar globalmente a simulação:</p>
+
+<ul>
+  <li><code>numInt</code>: Número máximo de interações</li>
+  <li><code>influenciaVento</code>: Ativa ou desativa a influência do vento</li>
+  <li><code>direcaoVento</code>: Vetor indicando as direções permitidas para propagação do fogo</li>
+</ul>
+
+<p>As direções seguem o seguinte índice: <code>0 = cima</code>, <code>1 = baixo</code>, <code>2 = esquerda</code>, <code>3 = direita</code>.</p>
 
 ---
 
@@ -141,4 +215,3 @@ Estado da matriz após 1 interações:
 
 <p align="center"><strong>Nome:</strong> Humberto</p>
 <p align="center"><strong>Curso:</strong> Engenharia da Computação - CEFET-MG</p>
-<p align="center"><strong>Data de Entrega:</strong> 20 de abril de 2025</p>
