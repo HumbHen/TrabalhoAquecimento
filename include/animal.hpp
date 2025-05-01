@@ -4,6 +4,9 @@
 #include "matriz.hpp"
 #include <utility>
 
+const int iX = 2;
+const int iY = 5;
+
 using namespace std;
 
 class Animal {
@@ -11,6 +14,7 @@ public:
     Animal(int x, int y);
 
     int getPassosPercorridos() const;
+    int getEncontrosComAgua() const;
 
     
     void mover(Matriz& matriz);

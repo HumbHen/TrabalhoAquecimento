@@ -20,7 +20,9 @@ int main() {
 
     Incendio incendio(matriz);
 
-    Animal animal(2, 5);
+    Animal animal(iX, iY);
+
+    cout << "\nPosição inicial do animal: (" << animal.getPosicao().first << ", " << animal.getPosicao().second << ")" << endl;
 
     for (int i = 1; i <= numInt; i++) {
         cout << "\n------------------------\n" << endl;;
@@ -33,6 +35,8 @@ int main() {
             cout << "Animal cercado" << i << endl;
             break;
         }
+
+        cout << "Posição atual do animal: (" << animal.getPosicao().first << ", " << animal.getPosicao().second << ")" << endl;
 
         incendio.executarIteracao();
 
@@ -50,6 +54,7 @@ int main() {
     cout << "\n------------------------\n" << endl;
     cout << "Simulação finalizada." << endl;
     cout << "Total de passos percorridos pelo animal: " << animal.getPassosPercorridos() << endl;
+    cout << "Total de encontros do animal com água: " << animal.getEncontrosComAgua() << endl;
     cout << "Posição final do animal: (" << animal.getPosicao().first << ", " << animal.getPosicao().second << ")" << endl;
 
     return 0;

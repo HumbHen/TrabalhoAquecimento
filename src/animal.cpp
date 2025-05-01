@@ -91,3 +91,7 @@ bool Animal::podeMover(int x, int y, const Matriz& matriz) const {
 int Animal::getPassosPercorridos() const {
     return passosPercorridos;
 }
+
+int Animal::getEncontrosComAgua() const {
+    return encontrosComAgua;
+}
